@@ -4,6 +4,7 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { DatabaseModule } from './database/database.module';
 import { SamitiModule } from './samiti/samiti.module';
+import { MembershipModule } from './membership/membership.module';
 
 @Module({
   imports: [
@@ -13,6 +14,7 @@ import { SamitiModule } from './samiti/samiti.module';
     }),
     DatabaseModule,
     SamitiModule,
+    MembershipModule,
   ],
   controllers: [AppController],
   providers: [AppService],
