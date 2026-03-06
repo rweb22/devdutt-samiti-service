@@ -5,6 +5,7 @@ import {
   Body,
   Param,
 } from '@nestjs/common';
+import { ApiTags, ApiOperation, ApiResponse } from '@nestjs/swagger';
 import { NcmService } from '../services/ncm.service';
 import { InitiateNcmDto, VoteNcmDto } from '../dto';
 import { NcmMotion, NcmSignature, NcmVote } from '../../entities';
@@ -13,6 +14,7 @@ import { NcmMotion, NcmSignature, NcmVote } from '../../entities';
  * NCM Controller
  * Endpoints for No Confidence Motion workflow
  */
+@ApiTags('ncm')
 @Controller('api/v1/samitis/:samitiId/ncm')
 export class NcmController {
   constructor(private readonly ncmService: NcmService) {}

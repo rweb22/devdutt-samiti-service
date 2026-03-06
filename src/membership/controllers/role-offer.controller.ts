@@ -4,6 +4,7 @@ import {
   Post,
   Param,
 } from '@nestjs/common';
+import { ApiTags, ApiOperation, ApiResponse } from '@nestjs/swagger';
 import { RoleOfferService } from '../services/role-offer.service';
 import { SamitiRoleOffer } from '../../entities';
 
@@ -11,6 +12,7 @@ import { SamitiRoleOffer } from '../../entities';
  * Role Offer Controller
  * Endpoints for users to manage their role offers
  */
+@ApiTags('offers')
 @Controller('api/v1/offers')
 export class RoleOfferController {
   constructor(private readonly roleOfferService: RoleOfferService) {}

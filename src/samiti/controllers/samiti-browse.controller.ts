@@ -3,6 +3,7 @@ import {
   Get,
   Param,
 } from '@nestjs/common';
+import { ApiTags, ApiOperation, ApiResponse } from '@nestjs/swagger';
 import { SamitiService } from '../services/samiti.service';
 import { Samiti } from '../../entities';
 
@@ -10,6 +11,7 @@ import { Samiti } from '../../entities';
  * Samiti Browse Controller
  * Public endpoints for browsing samiti hierarchy
  */
+@ApiTags('samitis')
 @Controller('api/v1/samitis')
 export class SamitiBrowseController {
   constructor(private readonly samitiService: SamitiService) {}

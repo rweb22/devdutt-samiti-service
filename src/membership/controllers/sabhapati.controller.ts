@@ -6,6 +6,7 @@ import {
   Param,
   Get,
 } from '@nestjs/common';
+import { ApiTags, ApiOperation, ApiResponse } from '@nestjs/swagger';
 import { SamitiService } from '../../samiti/services/samiti.service';
 import { MembershipService } from '../services/membership.service';
 import { RoleOfferService } from '../services/role-offer.service';
@@ -18,6 +19,7 @@ import { Samiti, Membership, SamitiRoleOffer, SamitiRole } from '../../entities'
  * Endpoints for Sabhapati (leader) operations
  * Requires SABHAPATI role
  */
+@ApiTags('sabhapati')
 @Controller('api/v1/sabhapati/samitis')
 export class SabhapatiController {
   constructor(
