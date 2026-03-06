@@ -9,4 +9,14 @@ export class AppController {
   getHello(): string {
     return this.appService.getHello();
   }
+
+  @Get('health')
+  getHealth(): { status: string; timestamp: string; service: string } {
+    return {
+      status: 'ok',
+      timestamp: new Date().toISOString(),
+      service: 'devdutt-samiti-service',
+    };
+  }
 }
+
