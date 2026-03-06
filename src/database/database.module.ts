@@ -6,6 +6,9 @@ import {
   Membership,
   MembershipChange,
   SamitiRoleOffer,
+  NcmMotion,
+  NcmSignature,
+  NcmVote,
 } from '../entities';
 
 @Module({
@@ -24,6 +27,9 @@ import {
           Membership,
           MembershipChange,
           SamitiRoleOffer,
+          NcmMotion,
+          NcmSignature,
+          NcmVote,
         ],
         synchronize: false, // Use migrations instead
         logging: configService.get('NODE_ENV') === 'development',
